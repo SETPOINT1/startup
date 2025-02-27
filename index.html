@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - Web App ผู้รับเหมา</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="images/logo.png" alt="โลโก้บริษัท">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">หน้าแรก</a></li>
+                    <li><a href="/about">เกี่ยวกับเรา</a></li>
+                    <li><a href="/services">บริการ</a></li>
+                    <li><a href="/projects">ผลงาน</a></li>
+                    <li><a href="/contact">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+            <a href="/contact" class="button accent">ขอใบเสนอราคา</a>
+            <button id="menu-toggle" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="ภาพโครงการก่อสร้าง">
+            </div>
+            <div class="hero-content">
+                <h1>สร้างสรรค์พื้นที่ของคุณด้วยคุณภาพและความเชี่ยวชาญ</h1>
+                <p>เราคือผู้เชี่ยวชาญด้านการก่อสร้างที่มุ่งมั่นสร้างสรรค์ผลงานที่มีคุณภาพและตอบโจทย์ความต้องการของลูกค้าทุกระดับ</p>
+                <a href="#projects" class="button secondary">ดูผลงาน</a>
+                <a href="#contact" class="button accent">ขอใบเสนอราคา</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>บริการของเรา</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-home fa-3x"></i>
+                    <h3>สร้างบ้าน</h3>
+                    <p>สร้างบ้านในฝันของคุณด้วยทีมงานมืออาชีพและวัสดุคุณภาพสูง</p>
+                    <a href="/services#building" class="button secondary">ดูรายละเอียดเพิ่มเติม</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools fa-3x"></i>
+                    <h3>ต่อเติม</h3>
+                    <p>ต่อเติมพื้นที่ใช้สอยให้ตรงกับความต้องการของคุณ</p>
+                    <a href="/services#extension" class="button secondary">ดูรายละเอียดเพิ่มเติม</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-paint-roller fa-3x"></i>
+                    <h3>รีโนเวท</h3>
+                    <p>ปรับปรุงบ้านเก่าให้สวยงามและทันสมัย</p>
+                    <a href="/services#renovation" class="button secondary">ดูรายละเอียดเพิ่มเติม</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-drafting-compass fa-3x"></i>
+                    <h3>ออกแบบ</h3>
+                    <p>ออกแบบบ้านและอาคารให้ตรงกับสไตล์และความต้องการของคุณ</p>
+                    <a href="/services#design" class="button secondary">ดูรายละเอียดเพิ่มเติม</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us">
+        <div class="container">
+            <h2>ทำไมต้องเลือกเรา</h2>
+            <div class="why-choose-us-grid">
+                <div class="why-choose-us-item">
+                    <i class="fas fa-certificate fa-3x"></i>
+                    <h3>ประสบการณ์</h3>
+                    <p>เรามีประสบการณ์ในการก่อสร้างมากกว่า 10 ปี</p>
+                </div>
+                <div class="why-choose-us-item">
+                    <i class="fas fa-check-circle fa-3x"></i>
+                    <h3>คุณภาพ</h3>
+                    <p>เรามุ่งมั่นสร้างสรรค์ผลงานที่มีคุณภาพสูงสุด</p>
+                </div>
+                <div class="why-choose-us-item">
+                    <i class="fas fa-users fa-3x"></i>
+                    <h3>ทีมงานมืออาชีพ</h3>
+                    <p>เรามีทีมงานที่เชี่ยวชาญและพร้อมให้บริการ</p>
+                </div>
+                <div class="why-choose-us-item">
+                    <i class="fas fa-handshake fa-3x"></i>
+                    <h3>ความน่าเชื่อถือ</h3>
+                    <p>เราให้ความสำคัญกับความซื่อสัตย์และความโปร่งใส</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>ผลงานของเรา</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="images/project1.jpg" alt="โครงการ 1">
+                    <h3>โครงการบ้านเดี่ยว</h3>
+                    <p>บ้านเดี่ยวสไตล์โมเดิร์น</p>
+                    <a href="/projects/project1" class="button secondary">ดูรายละเอียด</a>
+                </div>
+                <div class="project-item">
+                    <img src="images/project2.jpg" alt="โครงการ 2">
+                    <h3>โครงการอาคารพาณิชย์</h3>
+                    <p>อาคารพาณิชย์ใจกลางเมือง</p>
+                    <a href="/projects/project2" class="button secondary">ดูรายละเอียด</a>
+                </div>
+                <div class="project-item">
+                    <img src="images/project3.jpg" alt="โครงการ 3">
+                    <h3>โครงการคอนโดมิเนียม</h3>
+                    <p>คอนโดมิเนียมหรูริมแม่น้ำ</p>
+                    <a href="/projects/project3" class="button secondary">ดูรายละเอียด</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>ความคิดเห็นจากลูกค้า</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <img src="images/customer1.jpg" alt="ลูกค้า 1">
+                    <p>"บริการดีมาก ทีมงานมืออาชีพ ให้คำปรึกษาดีมากค่ะ"</p>
+                    <h3>คุณสมศรี</h3>
+                </div>
+                <div class="testimonial-item">
+                    <img src="images/customer2.jpg" alt="ลูกค้า 2">
+                    <p>"ผลงานออกมาดีเกินคาด ราคาเหมาะสม คุ้มค่ามากครับ"</p>
+                    <h3>คุณสมชาย</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-info">
+                <h3>ข้อมูลติดต่อ</h3>
+                <p>123/45 ถนน ตัวอย่าง แขวง/ตำบล ตัวอย่าง เขต/อำเภอ ตัวอย่าง จังหวัด ตัวอย่าง 10000</p>
+                <p>โทร: 02-123-4567</p>
+                <p>อีเมล: info@example.com</p>
+            </div>
+            <div class="footer-links">
+                <h3>ลิงก์สำคัญ</h3>
+                <ul>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 บริษัท ตัวอย่าง จำกัด. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
