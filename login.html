@@ -3,61 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - IdeaD</title>
+    <title>Sign in to IdeaD</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="Login to your IdeaD account">
+    <meta name="description" content="Sign in to your IdeaD account to start exploring and creating brilliant business models.">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <a href="index.html" class="logo">IdeaD</a>
-            <nav class="main-nav" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="browse.html">Browse</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-             <div class="header-actions">
-                <div class="search-bar">
-                    <input type="search" placeholder="ค้นหาไอเดียธุรกิจ" aria-label="Search Business Models">
-                    <button aria-label="Search"><i class="fas fa-search"></i></button>
-                </div>
-                 <div class="auth-links">
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Register</a>
-                </div>
-            </div>
-            <button class="hamburger-menu" aria-expanded="false" aria-controls="main-nav">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </button>
+    <div class="auth-container">
+        <div class="auth-illustration">
+            <img src="\images\27957648e7cfb34a580420cd7d0558d8.jpg" alt="Login Illustration" loading="lazy">
         </div>
-    </header>
-
-    <main class="container login-page">
-        <h1>Login</h1>
-        <form class="login-form">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true">
+        <div class="auth-form">
+            <h1 class="form-title">Sign in to IdeaD</h1>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Username or email address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your username or email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required aria-required="true">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+            <div class="new-account">
+                <p>New to IdeaD? <a href="register.html">Create an account</a></p>
             </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required aria-required="true">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-    </main>
-
-    <footer class="site-footer">
+        </div>
+    </div>
+    <footer class="site-footer auth-footer">
         <div class="container">
             <p>© 2023 IdeaD. All rights reserved. <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
