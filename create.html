@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Business Model - IdeaD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Share Your Brilliant Idea - The simplest way">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">IdeaD</a>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+           <div class="header-actions">
+                <div class="search-bar">
+                    <input type="search" placeholder="ค้นหาไอเดียธุรกิจ" aria-label="Search Business Models">
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                 <div class="auth-links">
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+            <button class="hamburger-menu" aria-expanded="false" aria-controls="main-nav">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </button>
+        </div>
+    </header>
+
+    <main class="container create-page">
+        <div class="create-container">
+            <div class="create-content">
+                <article class="create-model">
+                    <h1>Create New Business Model</h1>
+                    <form class="create-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Enter Business Model Name" required aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="description" name="description" placeholder="Enter Business Model Description" rows="5" required aria-required="true"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="price" name="price" placeholder="Enter Price" required aria-required="true">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </form>
+                </article>
+
+                <aside class="tips">
+                    <h3>Tips for Creating a Great Business Model</h3>
+                    <ul>
+                        <li>Clearly define your value proposition</li>
+                        <li>Identify your target market</li>
+                        <li>Create a sustainable revenue model</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2023 IdeaD. All rights reserved. <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

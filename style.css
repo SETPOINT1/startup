@@ -1,473 +1,941 @@
-/* Reset CSS */
-* {
+/* =================================
+   General Styles
+   ================================= */
+   body {
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #e0f2f7; /* A light pastel blue */
+    color: #333;
+    line-height: 1.7;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-body {
-    font-family: 'Prompt', sans-serif;
-    line-height: 1.6;
+main {
+    flex: 1; /* Make main content take up remaining space */
 }
 
-/* Header Styles */
-#header {
-    background-color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* About Page - Revised (White Background) */
+.about-page,
+.faq-page,
+.contact-page,
+.login-page,
+.register-page,
+.profile-page,
+.create-page,
+.browse-page,
+.model-detail {
+    background-color: #fff; /* White background for main content */
+}
+
+a {
+    text-decoration: none;
+    color: #FF4081; /* Vibrant Pink for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c51162;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =================================
+   Site Header Styles
+   ================================= */
+.site-header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(10px);
 }
 
-#header .container {
+.site-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
-.logo img {
-    height: 50px; /* Adjust logo size as needed */
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #29ABE2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-    list-style: none;
+/* =================================
+   Main Navigation Styles
+   ================================= */
+.main-nav ul {
     display: flex;
 }
 
-nav ul li {
-    margin-left: 20px;
+.main-nav ul li {
+    margin: 0 15px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #343a40; /* Dark Gray */
-    font-weight: 600;
-    transition: color 0.3s ease;
+.main-nav ul li a {
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #007bff; /* Secondary Color */
+.main-nav ul li a:hover {
+    color: #FF4081;
+    background-color: rgba(255, 64, 129, 0.05);
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 15px;
+/* =================================
+   Header Actions Styles (Search Bar, Login/Register Links)
+   ================================= */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="search"] {
+    padding: 10px 15px;
+    border: 1px solid #a6d4fa;
+    border-radius: 30px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.search-bar input[type="search"]:focus {
+    border-color: #FF4081;
+    box-shadow: 0 2px 6px rgba(255, 64, 129, 0.15);
+}
+
+.search-bar button {
+    background-color: #FF4081;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #c51162;
+}
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-links a {
+    color: #64b5f6;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #64b5f6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-links a:hover {
+    background-color: #64b5f6;
+    color: white;
+    box-shadow: 0 2px 6px rgba(100, 181, 246, 0.3);
+}
+
+/* =================================
+   Hamburger Menu Styles
+   ================================= */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    padding: 0;
     transition: all 0.3s ease;
 }
 
-.button.secondary {
-    background-color: #007bff; /* Secondary Color */
-    color: #fff;
-}
-
-.button.accent {
-    background-color: #fd7e14; /* Accent Color */
-    color: #fff;
-}
-
-.button:hover {
-    opacity: 0.8;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: #343a40;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-/* Hero Section Styles */
-#hero {
-    background-color: #f8f9fa; /* Light Gray */
-    padding: 80px 0;
-}
-
-#hero .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero-image {
-    width: 50%;
-}
-
-.hero-image img {
+.hamburger-menu .bar {
+    height: 3px;
     width: 100%;
-    height: auto;
+    background-color: #64b5f6;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.hero-content {
-    width: 45%;
+.hamburger-menu.open .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #c51162;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #004085; /* Primary Color */
-    margin-bottom: 20px;
+.hamburger-menu.open .bar2 {
+    opacity: 0;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    color: #495057; /* Dark Gray */
+.hamburger-menu.open .bar3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #c51162;
+}
+
+/* =================================
+   Hero Section Styles
+   ================================= */
+.hero-section {
+    background: linear-gradient(135deg, #fce4ec 0%, #e0f2f7 100%);
+    color: #4a148c;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #6a1b9a;
+}
+
+/* =================================
+   Button Styles
+   ================================= */
+.btn {
+    font-size: 1.1em;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 12px;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background-color: #FF4081;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #64b5f6;
+    border: 2px solid #64b5f6;
+}
+
+.btn-primary:hover {
+    background-color: #c51162;
+}
+
+.btn-secondary:hover {
+    background-color: #bbdefb;
+    color: #283593;
+}
+
+/* =================================
+   Featured Business Models Section Styles
+   ================================= */
+.featured-models-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.featured-models-section h2 {
+    font-size: 2.2em;
+    font-weight: 700;
     margin-bottom: 30px;
-}
-
-/* Services Section Styles */
-#services {
-    padding: 60px 0;
-    background-color: #fff;
-}
-
-#services .container {
     text-align: center;
+    color: #64b5f6;
 }
 
-#services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #004085; /* Primary Color */
-}
-
-.services-grid {
+.model-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 20px;
 }
 
-.service-item {
-    padding: 30px;
-    background-color: #f8f9fa; /* Light Gray */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-}
-
-.service-item i {
-    margin-bottom: 20px;
-    color: #007bff; /* Secondary Color */
-}
-
-.service-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #343a40; /* Dark Gray */
-}
-
-.service-item p {
-    font-size: 1.1rem;
-    color: #495057; /* Dark Gray */
-}
-
-/* Why Choose Us Section Styles */
-#why-choose-us {
-    padding: 60px 0;
-    background-color: #f8f9fa; /* Light Gray */
-}
-
-#why-choose-us .container {
-    text-align: center;
-}
-
-#why-choose-us h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #004085; /* Primary Color */
-}
-
-.why-choose-us-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.why-choose-us-item {
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.why-choose-us-item:hover {
-    transform: translateY(-5px);
-}
-
-.why-choose-us-item i {
-    margin-bottom: 20px;
-    color: #007bff; /* Secondary Color */
-}
-
-.why-choose-us-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #343a40; /* Dark Gray */
-}
-
-.why-choose-us-item p {
-    font-size: 1.1rem;
-    color: #495057; /* Dark Gray */
-}
-
-/* Projects Section Styles */
-#projects {
-    padding: 60px 0;
-    background-color: #fff;
-}
-
-#projects .container {
-    text-align: center;
-}
-
-#projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #004085; /* Primary Color */
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-.project-item {
-    border-radius: 10px;
+.model-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
-}
-
-.project-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.project-item h3 {
-    font-size: 1.5rem;
-    margin: 15px;
-    color: #343a40; /* Dark Gray */
-}
-
-.project-item p {
-    font-size: 1.1rem;
-    margin: 0 15px 15px 15px;
-    color: #495057; /* Dark Gray */
-}
-
-/* Testimonials Section Styles */
-#testimonials {
-    padding: 60px 0;
-    background-color: #f8f9fa; /* Light Gray */
-}
-
-#testimonials .container {
-    text-align: center;
-}
-
-#testimonials h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #004085; /* Primary Color */
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-}
-
-.testimonial-item {
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.testimonial-item:hover {
-    transform: translateY(-5px);
-}
-
-.testimonial-item img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.testimonial-item p {
-    font-size: 1.1rem;
-    color: #495057; /* Dark Gray */
-    margin-bottom: 15px;
-}
-
-.testimonial-item h3 {
-    font-size: 1.2rem;
-    color: #343a40; /* Dark Gray */
-}
-
-/* Footer Styles */
-#footer {
-    background-color: #343a40; /* Dark Gray */
-    color: #fff;
-    padding: 40px 0;
-}
-
-#footer .container {
     display: flex;
-    justify-content: space-between; /* เปลี่ยนจาก space-around เป็น space-between */
-    align-items: flex-start; /* เปลี่ยนจาก center เป็น flex-start */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap; /* เพิ่ม flex-wrap เพื่อให้ Footer Responsive */
+    flex-direction: column;
 }
 
-.footer-info {
-    width: 30%; /* ปรับขนาดตามความเหมาะสม */
+.model-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
+
+.model-card a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.model-card img {
+    border-bottom: 1px solid #eee;
     margin-bottom: 20px;
-    text-align: left; /* จัดข้อความชิดซ้าย */
+    transition: transform 0.5s ease;
 }
 
-.footer-links {
-    width: 20%; /* ปรับขนาดตามความเหมาะสม */
-    margin-bottom: 20px;
-    text-align: left; /* จัดข้อความชิดซ้าย */
+.model-card:hover img {
+    transform: scale(1.1);
 }
 
-.footer-info h3,
-.footer-links h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
+.model-card h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
-.footer-links ul li a {
+.model-card p {
+    color: #777;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FF4081;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.rating i {
+    margin-right: 3px;
+}
+
+.view-details {
+    background-color: #FFFFFF;
+    color: #FF4081;
+    border: 2px solid #FF4081;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
+    text-align: center;
+}
+
+.model-card a .view-details {
+  text-align: left;
+}
+
+.view-details:hover {
+    background-color: #FF4081;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+/* =================================
+   Testimonials Section Styles
+   ================================= */
+.testimonials-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.testimonials-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #FF4081;
+}
+
+.testimonial-slider {
+    /* Styles for the slider container */
+}
+
+.testimonial {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial footer {
+    font-style: normal;
+    color: #777;
+}
+
+/* =================================
+   Site Footer Styles
+   ================================= */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-footer {
+    background-color: #333;
     color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.site-footer a {
+    color: #e1f5fe;
+    text-decoration: underline;
+}
+
+/* =================================
+   Browse Page Styles
+   ================================= */
+.browse-page {
+    display: flex;
+    padding: 40px;
+    background-color: #fff;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filters {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.model-listings {
+    width: 75%;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.model-listings .text-business {
+    margin-bottom: 20px;
+}
+
+/* =================================
+   Model Detail Page Styles
+   ================================= */
+.model-detail {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.model-container {
+    width: 80%;
+    max-width: 1000px;
+}
+
+.model-content {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* =================================
+   About, FAQ, Contact Pages Styles
+   ================================= */
+.about-page,
+.faq-page,
+.contact-page {
+    padding: 30px 0;
+    background-color: #fff;
+}
+
+/* About Page - Revised (Team Section - GitHub Style) */
+.about-page {
+    padding: 50px 0;
+    background-color: #fff; /* เปลี่ยนเป็นสีขาว */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+.about-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #FF4081;
+    text-align: center;
+}
+
+.about-page p {
+    max-width: 800px; /* กำหนดความกว้างสูงสุด */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    line-height: 1.6;
+    color: #555;
+}
+
+.team-section {
+    padding: 30px;
+}
+
+.team-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #FF4081;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.team-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
+
+.team-card .team-image { /* Style the image container */
+    padding: 20px;
+}
+
+.team-card img {
+    width: 300px;
+    height: 230px;
+    border-radius: 8px; 
+    object-fit: cover;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ddd; /* Add border */
+}
+
+.team-card h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    padding-top: 20px; /* Add padding above name */
+    position: relative; /* For the line */
+}
+
+.team-card h3::before { /* Add line above name */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.team-card p {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.team-card .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.team-card .social-links a {
+    color: #64b5f6;
+    transition: color 0.3s ease;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.team-card .social-links a i {
+    font-size: 1.2em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-card .social-links a:hover {
+    color: #FF4081;
+}
+
+/* About Page - Revised (Team Section - Email Link) */
+.team-card .email-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.team-card .email-link a {
+    color: #777;
+    text-decoration: none;
+}
+
+.team-card .email-link a:hover {
+    color: #FF4081;
+}
+
+/* FAQ Page - Revised (Larger Size) */
+.faq-page {
+    padding: 50px 0;
+    background-color: #fff;
+    max-width: 1200px; /* เพิ่มความกว้างสูงสุดของ Container */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    box-sizing: border-box; /* รวม Padding ในความกว้าง */
+}
+
+.faq-page h1 {
+    font-size: 3em; /* เพิ่มขนาด Font ของ Heading */
+    margin-bottom: 30px;
+    color: #FF4081;
+    text-align: center;
+}
+
+.faq-search {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.faq-search input[type="text"] {
+    padding: 15px; /* เพิ่ม Padding ใน Input */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    font-size: 1.1em; /* เพิ่มขนาด Font ใน Input */
+}
+
+.faq-search button {
+    background-color: #FF4081;
+    color: #fff;
+    border: none;
+    padding: 15px 20px; /* เพิ่ม Padding ใน Button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em; /* เพิ่มขนาด Font ใน Button */
+}
+
+.faq-search button:hover {
+    background-color: #c51162;
+}
+
+.faq-list {
+    /* Styles for the list of FAQs */
+}
+
+.faq-item {
+    margin-bottom: 30px; /* เพิ่มระยะห่างระหว่าง FAQ Items */
+    border-bottom: 1px solid #eee;
+}
+
+.faq-question {
+    background-color: #f9f9f9;
+    color: #333;
+    border: none;
+    padding: 20px; /* เพิ่ม Padding ใน Question */
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.3em; /* เพิ่มขนาด Font ใน Question */
+    font-weight: 600;
+}
+
+.faq-question:hover {
+    background-color: #eee;
+}
+
+.faq-answer {
+    padding: 20px; /* เพิ่ม Padding ใน Answer */
+    display: none; /* Hide initially */
+}
+
+.faq-answer p {
+    line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    color: #555;
+    font-size: 1.1em; /* เพิ่มขนาด Font ใน Answer */
+}
+
+.container {
+    max-width: 960px; /* จำกัดความกว้างของเนื้อหาภายใน */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Add JavaScript to toggle the display of .faq-answer */
+
+/* =================================
+   Login & Register Pages - GitHub Style
+   ================================= */
+
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f6f8fa;
+}
+
+.auth-illustration {
+    width: 60%;
+    background: linear-gradient(135deg, #e0f7fa 0%, #fff5f8 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-illustration img {
+    max-width: 80%;
+    height: auto;
+}
+
+.auth-form {
+    width: 40%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-form .form-group,
+.register-form .form-group {
+    margin-bottom: 25px;
+}
+
+.login-form label,
+.register-form label {
+    display: block;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.login-form input,
+.register-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus,
+.register-form input:focus {
+    border-color: #FF4081;
+    box-shadow: 0 2px 5px rgba(255, 64, 129, 0.2);
+}
+
+.login-form .forgot-password {
+    display: block;
+    text-align: right;
+    color: #777;
+    margin-top: 5px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
-    color: #007bff; /* Secondary Color */
+.login-form .forgot-password:hover {
+    color: #FF4081;
 }
 
-.footer-copyright {
-    width: 100%;
+.new-account,
+.has-account {
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    margin-top: 30px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #footer .container {
-        flex-direction: column;
-        align-items: center; /* เปลี่ยนเป็น center สำหรับ Mobile */
-        text-align: center; /* เปลี่ยนเป็น center สำหรับ Mobile */
-    }
-
-    .footer-info,
-    .footer-links {
-        width: 100%; /* ขยายเต็มพื้นที่บน Mobile */
-    }
+.new-account a,
+.has-account a {
+    color: #FF4081;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Responsive Design */
+.new-account a:hover,
+.has-account a:hover {
+    color: #c51162;
+}
+
+/* =================================
+   Create Page Styles
+   ================================= */
+.create-page {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.create-container {
+    width: 80%;
+    max-width: 1000px;
+}
+
+.create-content {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.create-form .form-group input,
+.create-form .form-group textarea {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.create-form .form-group textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+/* Privacy Policy Page Styles - Revised (Padding) */
+.privacy-page {
+    padding: 50px; /* เพิ่ม Padding รอบด้าน */
+    background-color: #fff;
+}
+
+.privacy-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #FF4081;
+    text-align: center;
+}
+
+.privacy-page h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #64b5f6;
+}
+
+.privacy-page p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.privacy-page ul {
+    list-style: disc;
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+
+.privacy-page li {
+    margin-bottom: 5px;
+}
+
+.privacy-page a {
+    color: #FF4081;
+    text-decoration: underline;
+}
+
+.privacy-page a:hover {
+    color: #c51162;
+}
+
+/* =================================
+   Media Queries (Responsive Design)
+   ================================= */
 @media (max-width: 768px) {
-
-    #header .container,
-    #hero .container,
-    #footer .container,
-    #services .container,
-    #why-choose-us .container,
-    #projects .container,
-    #testimonials .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #header .container {
-        align-items: flex-start;
-    }
-
-    nav {
-        display: none;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .hero-image {
-        width: 80%;
-        margin-bottom: 30px;
-    }
-
-    .hero-content {
-        width: 80%;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .services-grid,
-    .why-choose-us-grid,
-    .projects-grid,
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
+    /* Adjust styles for smaller screens */
 }

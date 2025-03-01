@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IdeaD - Unlock Your Next Big Idea</title>
+    <title>Browse Business Models - IdeaD</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="The Marketplace for Business Models">
+    <meta name="description" content="Browse and discover new business models on IdeaD">
 </head>
 <body>
     <header class="site-header">
@@ -14,7 +14,7 @@
             <a href="index.html" class="logo">IdeaD</a>
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
@@ -24,7 +24,7 @@
                     <input type="search" placeholder="ค้นหาไอเดียธุรกิจ" aria-label="Search Business Models">
                     <button aria-label="Search"><i class="fas fa-search"></i></button>
                 </div>
-                <div class="auth-links">
+                 <div class="auth-links">
                     <a href="login.html">Login</a>
                     <a href="register.html">Register</a>
                 </div>
@@ -37,20 +37,40 @@
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="container">
-            <h1>Unlock Your Next Big Idea</h1>
-            <p>The Marketplace for Business Models</p>
-            <div class="cta-buttons">
-                <a href="browse.html" class="btn btn-primary">ค้นหาไอเดีย</a>
-                <a href="create.html" class="btn btn-secondary">ขายไอเดีย</a>
+    <main class="container browse-page">
+        <aside class="filters">
+            <h2 class="filter-title">Filters</h2>
+            <div class="filter-section">
+                <h3>Industry</h3>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="industry" value="tech" aria-label="Tech">
+                            Tech
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="industry" value="retail" aria-label="Retail">
+                            Retail
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="industry" value="food" aria-label="Food">
+                            Food
+                        </label>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
+            <div class="filter-section">
+                <h3>Budget</h3>
+                <input type="range" min="0" max="1000" value="500" aria-label="Budget Range">
+            </div>
+        </aside>
 
-    <section class="featured-models-section">
-        <div class="container">
-            <h2>Featured Business Models</h2>
+        <section class="model-listings">
+            <h2>Business Models</h2>
             <div class="model-grid">
                 <!-- Business Model Card - Example -->
                 <article class="model-card">
@@ -67,23 +87,8 @@
                 </article>
                 <!-- More Business Model Cards -->
             </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <div class="testimonial-slider">
-                <blockquote class="testimonial">
-                    <img src="images/user-avatar.jpg" alt="User Avatar" loading="lazy">
-                    <p>IdeaD helped me find the perfect business model to launch my startup.</p>
-                    <footer>
-                        <cite>John Doe, CEO, Startup Inc.</cite>
-                    </footer>
-                </blockquote>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container">

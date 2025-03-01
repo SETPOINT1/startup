@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IdeaD - Unlock Your Next Big Idea</title>
+    <title>Profile - IdeaD</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="The Marketplace for Business Models">
+    <meta name="description" content="Manage your profile and business models on IdeaD">
 </head>
 <body>
     <header class="site-header">
@@ -14,17 +14,18 @@
             <a href="index.html" class="logo">IdeaD</a>
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="browse.html">Browse</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </nav>
-            <div class="header-actions">
+             <div class="header-actions">
                 <div class="search-bar">
                     <input type="search" placeholder="ค้นหาไอเดียธุรกิจ" aria-label="Search Business Models">
                     <button aria-label="Search"><i class="fas fa-search"></i></button>
                 </div>
-                <div class="auth-links">
+                 <div class="auth-links">
                     <a href="login.html">Login</a>
                     <a href="register.html">Register</a>
                 </div>
@@ -37,22 +38,18 @@
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="container">
-            <h1>Unlock Your Next Big Idea</h1>
-            <p>The Marketplace for Business Models</p>
-            <div class="cta-buttons">
-                <a href="browse.html" class="btn btn-primary">ค้นหาไอเดีย</a>
-                <a href="create.html" class="btn btn-secondary">ขายไอเดีย</a>
-            </div>
-        </div>
-    </section>
+    <main class="container profile-page">
+        <section class="user-info">
+            <img src="images/user-avatar.jpg" alt="User Avatar" loading="lazy">
+            <h2>John Doe</h2>
+            <p>Entrepreneur</p>
+            <a href="#" class="btn btn-secondary">Edit Profile</a>
+        </section>
 
-    <section class="featured-models-section">
-        <div class="container">
-            <h2>Featured Business Models</h2>
+        <section class="my-models">
+            <h2>My Business Models</h2>
             <div class="model-grid">
-                <!-- Business Model Card - Example -->
+                <!-- Business Model Cards - Example -->
                 <article class="model-card">
                     <a href="business-model.html" aria-label="View details of Business Model Name">
                         <img src="images/placeholder-image.jpg" alt="Business Model" loading="lazy">
@@ -67,30 +64,14 @@
                 </article>
                 <!-- More Business Model Cards -->
             </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <div class="testimonial-slider">
-                <blockquote class="testimonial">
-                    <img src="images/user-avatar.jpg" alt="User Avatar" loading="lazy">
-                    <p>IdeaD helped me find the perfect business model to launch my startup.</p>
-                    <footer>
-                        <cite>John Doe, CEO, Startup Inc.</cite>
-                    </footer>
-                </blockquote>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container">
             <p>© 2023 IdeaD. All rights reserved. <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
